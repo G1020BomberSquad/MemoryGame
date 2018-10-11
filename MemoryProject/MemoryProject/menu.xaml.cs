@@ -24,9 +24,24 @@ namespace MemoryProject
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void newGame_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Test");
+
+        }
+
+        private void LoadGame_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Options_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

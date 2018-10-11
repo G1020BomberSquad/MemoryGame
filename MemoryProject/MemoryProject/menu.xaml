@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="menu" Height="450" Width="800">
     <Grid Background="#FFC54E4E">
-        <Button Content="Button" HorizontalAlignment="Left" Margin="395,173,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button x:Name="newGame" Content="Nieuw Spel" HorizontalAlignment="Left" Margin="140,93,0,0" VerticalAlignment="Top" Width="502" Height="41" FontSize="25" FontFamily="Impact, Charcoal, sans-serif" Background="#FFC57D00" Click="newGame_Click"/>
+        <Button x:Name="LoadGame" Content="Spel Laden" HorizontalAlignment="Left" Margin="140,191,0,0" VerticalAlignment="Top" Width="502" Height="41" FontSize="25" FontFamily="Impact, Charcoal, sans-serif" Background="#FFC57D00" Click="LoadGame_Click"/>
+        <Button x:Name="Options" Content="Opties" HorizontalAlignment="Left" Margin="140,294,0,0" VerticalAlignment="Top" Width="502" Height="41" FontSize="25" FontFamily="Impact, Charcoal, sans-serif" Background="#FFC57D00" Click="Options_Click"/>
+        <Button x:Name="exit" Content="Exit" HorizontalAlignment="Left" Margin="684,382,0,0" VerticalAlignment="Top" Width="108" Height="37" FontSize="15" FontFamily="Impact, Charcoal, sans-serif" Background="#FFC57D00" Click="exit_Click"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Main Menu" VerticalAlignment="Top" Height="60" Width="792" FontSize="50" FontFamily="Impact, Charcoal, sans-serif" Background="#FF54CB41" TextAlignment="Center"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="-331,73,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>
