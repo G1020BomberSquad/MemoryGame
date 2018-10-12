@@ -1,0 +1,15 @@
+C:\jsmeer\GitHub\MemoryGame\SpellenScherm\SpellenScherm\bin\Debug\SpellenScherm.exe.config
+C:\jsmeer\GitHub\MemoryGame\SpellenScherm\SpellenScherm\bin\Debug\SpellenScherm.exe
+C:\jsmeer\GitHub\MemoryGame\SpellenScherm\SpellenScherm\bin\Debug\SpellenScherm.pdb
+C:\jsmeer\GitHub\MemoryGame\SpellenScherm\SpellenScherm\obj\Debug\SpellenScherm.csprojAssemblyReference.cache
+C:\jsmeer\GitHub\MemoryGame\SpellenScherm\SpellenScherm\obj\Debug\MainWindow.g.cs
+C:\jsmeer\GitHub\MemoryGame\SpellenScherm\SpellenScherm\obj\Debug\App.g.cs
+C:\jsmeer\GitHub\MemoryGame\SpellenScherm\SpellenScherm\obj\Debug\SpellenScherm_MarkupCompile.cache
+C:\jsmeer\GitHub\MemoryGame\SpellenScherm\SpellenScherm\obj\Debug\SpellenScherm_MarkupCompile.lref
+C:\jsmeer\GitHub\MemoryGame\SpellenScherm\SpellenScherm\obj\Debug\MainWindow.baml
+C:\jsmeer\GitHub\MemoryGame\SpellenScherm\SpellenScherm\obj\Debug\SpellenScherm.g.resources
+C:\jsmeer\GitHub\MemoryGame\SpellenScherm\SpellenScherm\obj\Debug\SpellenScherm.Properties.Resources.resources
+C:\jsmeer\GitHub\MemoryGame\SpellenScherm\SpellenScherm\obj\Debug\SpellenScherm.csproj.GenerateResource.cache
+C:\jsmeer\GitHub\MemoryGame\SpellenScherm\SpellenScherm\obj\Debug\SpellenScherm.csproj.CoreCompileInputs.cache
+C:\jsmeer\GitHub\MemoryGame\SpellenScherm\SpellenScherm\obj\Debug\SpellenScherm.exe
+C:\jsmeer\GitHub\MemoryGame\SpellenScherm\SpellenScherm\obj\Debug\SpellenScherm.pdb
