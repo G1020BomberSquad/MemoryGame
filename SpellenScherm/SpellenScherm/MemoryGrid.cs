@@ -48,8 +48,7 @@ namespace SpellenScherm
                     Image back = new Image();
                     back.Source = new BitmapImage(new Uri("/images/back.png", UriKind.Relative));
 
-                    // klik op image = omdraaien
-                    back.MouseDown += new System.Windows.Input.MouseButtonEventHandler(CardClick);
+                    back.MouseDown += new System.Windows.Input.MouseButtonEventHandler(CardClick);            
 
                     back.Tag = images.First();
                     images.RemoveAt(0);
@@ -62,11 +61,6 @@ namespace SpellenScherm
 
         }
 
-        private void checkPoint()
-        {
-
-        }
-
         private void CardClick(object sender, MouseButtonEventArgs e)
         {
             Image card = (Image)sender;
@@ -74,7 +68,7 @@ namespace SpellenScherm
             card.Source = front;
         }
 
-        private List<ImageSource> GetImagesList()
+        public List<ImageSource> GetImagesList()
         {
             List<ImageSource> images = new List<ImageSource>();
             List<string> random = new List<string>();
@@ -93,14 +87,11 @@ namespace SpellenScherm
                 else
                 {
                     random.Add(Convert.ToString(imageNR));
-                    System.Threading.Thread.Sleep(100);
                     ImageSource source = new BitmapImage(new Uri("images/" + imageNR + ".png", UriKind.Relative));
                     images.Add(source);
                 }              
             }
-
             return images;
         }
-
     }
 }

@@ -19,7 +19,7 @@
                 <ColumnDefinition Width="146*"/>
                 <ColumnDefinition Width="269*"/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="score_name1" Content="Score: 6" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Height="55" Width="268" Background="#5D689A" FontSize="36" FontFamily="Viner Hand ITC" Grid.ColumnSpan="2"/>
+            <Label x:Name="scoreName1" Content="Score: 0" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Height="55" Width="268" Background="#5D689A" FontSize="36" FontFamily="Viner Hand ITC" Grid.ColumnSpan="2"/>
         </Grid>
         <Button x:Name="start" Content="Start" HorizontalAlignment="Left" Margin="1540,242,0,0" VerticalAlignment="Top" Width="297" Height="54" FontFamily="Viner Hand ITC" FontSize="36" Background="#29387C" Foreground="#5D689A" Click="start_Click"/>
         <Grid HorizontalAlignment="Left" Height="100" Margin="34,301,0,0" VerticalAlignment="Top" Width="580" Background="#29387C">
@@ -35,7 +35,7 @@
                 <ColumnDefinition Width="146*"/>
                 <ColumnDefinition Width="269*"/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="score_name2" Content="Score: 6" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" Height="55" Width="268" Background="#5D689A" FontSize="36" FontFamily="Viner Hand ITC" Grid.ColumnSpan="2"/>
+            <Label x:Name="scoreName2" Content="Score: 0" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" Height="55" Width="268" Background="#5D689A" FontSize="36" FontFamily="Viner Hand ITC" Grid.ColumnSpan="2"/>
         </Grid>
         <Grid x:Name="set1" HorizontalAlignment="Left" Height="54" Margin="34,242,0,0" VerticalAlignment="Top" Width="580" Background="#29387C">
             <TextBox x:Name="nameEnter1" HorizontalAlignment="Left" Height="34" Margin="45,10,0,0" TextWrapping="Wrap" Text="Player 1" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.311,0.552" Background="#3C4986"  Grid.ColumnSpan="2"/>
@@ -46,12 +46,12 @@
         </Border>
         <Grid x:Name="menuBar" HorizontalAlignment="Left" Height="66" Margin="34,120,0,0" VerticalAlignment="Top" Width="1840" Background="#FF29387C" Visibility="Collapsed">
             <Button x:Name="CloseMenuBar" Content="Close" HorizontalAlignment="Left" Margin="1740,10,0,0" VerticalAlignment="Top" Width="80" Height="46" Click="CloseMenuBar_Click" FontFamily="Viner Hand ITC" Background="#5D689A" FontSize="20"/>
-            <Button x:Name="SaveGame" Content="Save Game" HorizontalAlignment="Left" Margin="20,10,0,10" Width="225" FontFamily="Viner Hand ITC" Background="#5D689A" FontSize="20" Click="Button_Click"/>
+            <Button x:Name="SaveGame" Content="Save Game" HorizontalAlignment="Left" Margin="20,10,0,10" Width="225" FontFamily="Viner Hand ITC" Background="#5D689A" FontSize="20" Click="SaveGame_Click"/>
             <Button x:Name="LoadGame" Content="Load Game" HorizontalAlignment="Left" Margin="280,10,0,0" VerticalAlignment="Top" Width="225" Height="46" FontFamily="Viner Hand ITC" Background="#5D689A" FontSize="20" RenderTransformOrigin="0.5,0.5" Click="LoadGame_Click"/>
             <Button x:Name="ResetGame" Content="Reset Game" HorizontalAlignment="Left" Margin="540,10,0,0" VerticalAlignment="Top" Width="225" Height="46" FontFamily="Viner Hand ITC" Background="#5D689A" FontSize="20" Click="ResetGame_Click"/>
             <Button x:Name="toMain" Content="Main Screen" HorizontalAlignment="Left" Margin="800,10,0,0" VerticalAlignment="Top" Width="225" Height="46" FontFamily="Viner Hand ITC" Background="#5D689A" FontSize="20" Click="toMain_Click"/>
             <Button x:Name="close" Content="Close Game" HorizontalAlignment="Left" Margin="1060,10,0,0" VerticalAlignment="Top" Width="225" Height="46" FontFamily="Viner Hand ITC" Background="#5D689A" FontSize="20" Click="close_Click"/>
-            <Button x:Name="Help" Content="Help" HorizontalAlignment="Left" Margin="1320,10,0,0" VerticalAlignment="Top" Width="225" Height="46" FontFamily="Viner Hand ITC" Background="#5D689A" FontSize="20"/>
+            <Button x:Name="Help" Content="Help" HorizontalAlignment="Left" Margin="1320,10,0,0" VerticalAlignment="Top" Width="225" Height="46" FontFamily="Viner Hand ITC" Background="#5D689A" FontSize="20" Click="Help_Click"/>
         </Grid>
         <Grid x:Name="set2" HorizontalAlignment="Left" Height="54" Margin="619,242,0,0" VerticalAlignment="Top" Width="106" Background="#29387C">
             <Button x:Name="setNames" Content="Set" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="86" Background="#5D689A" RenderTransformOrigin="0.585,0.971" Height="34" FontFamily="Viner Hand ITC" FontSize="20" Click="setNames_Click"/>
