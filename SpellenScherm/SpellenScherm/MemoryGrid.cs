@@ -10,11 +10,10 @@ using System.Windows.Media.Imaging;
 
 namespace SpellenScherm
 {
-     public class MemoryGrid
+    public class MemoryGrid
     {
         private Grid grid;
         private int rows, cols;
-        private object game_grid;
 
         public MemoryGrid(Grid grid, int rows, int cols)
         {
@@ -78,12 +77,26 @@ namespace SpellenScherm
         private List<ImageSource> GetImagesList()
         {
             List<ImageSource> images = new List<ImageSource>();
+            List<string> random = new List<string>();
 
             for (int i = 0; i < 16; i++)
             {
-                int imageNR = i % 8 + 1;
-                ImageSource source = new BitmapImage(new Uri("images/" + imageNR + ".png", UriKind.Relative));
-                images.Add(source);
+                
+                int imageNR = 0;
+
+                Random rnd = new Random();
+                imageNR = rnd.Next(1, 17);
+                if (random.Contains(Convert.ToString(imageNR)))
+                {
+                    i--;
+                }
+                else
+                {
+                    random.Add(Convert.ToString(imageNR));
+                    System.Threading.Thread.Sleep(100);
+                    ImageSource source = new BitmapImage(new Uri("images/" + imageNR + ".png", UriKind.Relative));
+                    images.Add(source);
+                }              
             }
 
             return images;
