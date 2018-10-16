@@ -48,24 +48,41 @@ namespace SpellenScherm
                     Image back = new Image();
                     back.Source = new BitmapImage(new Uri("/images/back.png", UriKind.Relative));
 
-                    back.MouseDown += new System.Windows.Input.MouseButtonEventHandler(CardClick);            
+                    back.MouseDown += new System.Windows.Input.MouseButtonEventHandler(CardClick);
 
                     back.Tag = images.First();
-                    images.RemoveAt(0);
-
+                    images.RemoveAt(0);                                 
                     Grid.SetColumn(back, col);
                     Grid.SetRow(back, row);
                     grid.Children.Add(back);
                 }
             }
+        }
+
+        static int numberOfClicks = 0;
+        private void resetCard()
+        {
 
         }
 
         private void CardClick(object sender, MouseButtonEventArgs e)
         {
-            Image card = (Image)sender;
-            ImageSource front = (ImageSource)card.Tag;
-            card.Source = front;
+           
+            if (numberOfClicks < 2)
+            {
+                Image card = (Image)sender;
+                ImageSource front = (ImageSource)card.Tag;
+                card.Source = front;
+                numberOfClicks++;
+                
+            }
+            if (numberOfClicks == 2)
+            {
+                
+                resetCard();
+
+                numberOfClicks = numberOfClicks -2;
+            }
         }
 
         public List<ImageSource> GetImagesList()

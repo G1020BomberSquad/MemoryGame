@@ -67,7 +67,7 @@ namespace SpellenScherm
 
         private void toMain_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("A main screen is not made yet.");
+            MessageBox.Show("A main screen has not been made yet.");
         }
 
         private void close_Click(object sender, RoutedEventArgs e)
