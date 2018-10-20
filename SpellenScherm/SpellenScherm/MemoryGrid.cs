@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -51,7 +51,7 @@ namespace SpellenScherm
                     back.MouseDown += new System.Windows.Input.MouseButtonEventHandler(CardClick);
 
                     back.Tag = images.First();
-                    images.RemoveAt(0);                                 
+                    images.RemoveAt(0);
                     Grid.SetColumn(back, col);
                     Grid.SetRow(back, row);
                     grid.Children.Add(back);
@@ -59,30 +59,82 @@ namespace SpellenScherm
             }
         }
 
-        static int numberOfClicks = 0;
-        private void resetCard()
-        {
 
-        }
+
+        static int numberOfClicks = 0;
+        private Image card;
+        static int score;
+        private Image Image1;
+        private Image Image2;
+
+
 
         private void CardClick(object sender, MouseButtonEventArgs e)
         {
-           
-            if (numberOfClicks < 2)
+            if (hasDelay) return;
+
+            Image card = (Image)sender;
+            ImageSource front = (ImageSource)card.Tag;
+            card.Source = front;
+            numberOfClicks++;
+
+            checkCards(card);
+        }
+
+        private void checkCards(Image card)
+        {
+
+            this.card = card;
+            if (numberOfClicks < 2 || numberOfClicks == 2)
             {
-                Image card = (Image)sender;
-                ImageSource front = (ImageSource)card.Tag;
-                card.Source = front;
-                numberOfClicks++;
-                
+
+                if (this.Image1 == null)
+                {
+                    Image1 = card;
+                }
+                else if (this.Image2 == null)
+                {
+                    Image2 = card;
+                }
             }
+
             if (numberOfClicks == 2)
             {
-                
-                resetCard();
+                checkPair();
 
-                numberOfClicks = numberOfClicks -2;
+                numberOfClicks = 0;
+                Image1 = null;
+                Image2 = null;
             }
+        }
+
+        public void checkPair()
+        {
+            resetCards(Image1, Image2);
+            //if (((Image1.Source == "/images/1.png") && (Image2.Source == "/images/9.png")) || ((Image2.Source == "/images/1.png") && (Image1.Source == "/images/9.png")))
+            //{
+            //    score++;
+            //}
+            //else
+            //{
+            //    resetCards(Image1, Image2);
+            //}
+
+        }
+
+        private bool hasDelay;
+        private async void resetCards(Image card1, Image card2)
+        {
+            this.Image1 = card1;
+            this.Image2 = card2;
+
+            hasDelay = true;
+            await Task.Delay(2000);
+
+
+            card1.Source = new BitmapImage(new Uri("/images/back.png", UriKind.Relative));
+            card2.Source = new BitmapImage(new Uri("/images/back.png", UriKind.Relative));
+            hasDelay = false;
         }
 
         public List<ImageSource> GetImagesList()
@@ -92,7 +144,7 @@ namespace SpellenScherm
 
             for (int i = 0; i < 16; i++)
             {
-                
+
                 int imageNR = 0;
 
                 Random rnd = new Random();
@@ -106,7 +158,7 @@ namespace SpellenScherm
                     random.Add(Convert.ToString(imageNR));
                     ImageSource source = new BitmapImage(new Uri("images/" + imageNR + ".png", UriKind.Relative));
                     images.Add(source);
-                }              
+                }
             }
             return images;
         }
