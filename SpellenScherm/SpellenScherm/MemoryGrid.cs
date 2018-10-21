@@ -178,7 +178,7 @@ namespace SpellenScherm
             this.Image1 = card1;
             this.Image2 = card2;
 
-            if (Convert.ToString(card1.Source) == Convert.ToString(card2.Source))
+            if (Convert.ToString(card1.Source) == Convert.ToString(card2.Source) && (card1 != card2))
             {
                 getPoint(card1, card2);
             }
