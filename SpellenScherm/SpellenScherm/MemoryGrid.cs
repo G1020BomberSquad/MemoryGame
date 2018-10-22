@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Timers;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -15,8 +16,13 @@ namespace SpellenScherm
         private Grid grid;
         private int rows, cols;
         static int numberOfClicks = 0;
-        static int score;
+        static int scoreName1Tot;
+        static int scoreName2Tot;
+        static int scoreName1;
+        static int scoreName2;
         private bool hasDelay;
+        private bool turnName1 = true;
+        private bool turnName2 = false;
         private Image card;
         private Image Image1;
         private Image Image2;
@@ -138,6 +144,51 @@ namespace SpellenScherm
         }
 
         /// <summary>
+        /// Highlights player, who's turn it is. (non functional, yet)
+        /// </summary>
+        private void checkTurn()
+        {
+            if (turnName1 == true)
+            {
+                var bc = new BrushConverter();
+                foreach (MainWindow window in Application.Current.Windows)
+                {
+                    if (window.GetType() == typeof(MainWindow))
+                    {
+                        (window as MainWindow).name1.Background = Brushes.HotPink;
+                    }
+                }
+
+                foreach (MainWindow window in Application.Current.Windows)
+                {
+                    if (window.GetType() == typeof(MainWindow))
+                    {
+                        (window as MainWindow).name2.Background = (Brush)bc.ConvertFrom("#5d689a");
+                    }
+                }
+            }
+            else if (turnName2 == true)
+            {
+                var bc = new BrushConverter();
+                foreach (MainWindow window in Application.Current.Windows)
+                {
+                    if (window.GetType() == typeof(MainWindow))
+                    {
+                        (window as MainWindow).name2.Background =  Brushes.HotPink;
+                    }
+                }
+
+                foreach (MainWindow window in Application.Current.Windows)
+                {
+                    if (window.GetType() == typeof(MainWindow))
+                    {
+                        (window as MainWindow).name1.Background = (Brush)bc.ConvertFrom("#5d689a");
+                    }
+                }
+            }
+        }
+
+        /// <summary>
         /// Grab the clicked card
         /// </summary>
         /// <param name="card">The card that has been clicked</param>
@@ -187,6 +238,59 @@ namespace SpellenScherm
                 resetCards(Image1, Image2);
             }
 
+            if (turnName1 == true)
+            {
+                if (scoreName1 == 1)
+                {
+                    scoreName1Tot = scoreName1 + scoreName1Tot;
+                }
+                else if (scoreName1 == 0)
+                {
+                    turnName1 = false;
+                    turnName2 = true;
+                }
+            }
+            else if (turnName2 == true)
+            {
+                if (scoreName2 == 1)
+                {
+                    scoreName2Tot = scoreName2 + scoreName2Tot;
+                }
+                else if (scoreName2 == 0)
+                {
+                    turnName2 = false;
+                    turnName1 = true;
+                }
+            }
+
+            updateScore();
+
+
+            scoreName1 = 0;
+            scoreName2 = 0;
+            // checkTurn();
+        }
+
+        /// <summary>
+        /// Updates Score Labels
+        /// </summary>
+        private void updateScore()
+        {
+            foreach (MainWindow window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(MainWindow))
+                {
+                    (window as MainWindow).scoreName1.Content = scoreName1Tot;
+                }
+            }
+
+            foreach (MainWindow window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(MainWindow))
+                {
+                    (window as MainWindow).scoreName2.Content = scoreName2Tot;
+                }
+            }
         }
 
         /// <summary>
@@ -196,7 +300,15 @@ namespace SpellenScherm
         /// <param name="card2">The second card that has been clicked</param>
         private async void getPoint(Image card1, Image card2)
         {
-            score++;
+            if (turnName1 == true)
+            {
+                scoreName1++;
+            }
+            else if (turnName2 == true)
+            {
+                scoreName2++;
+            }
+
             hasDelay = true;
             await Task.Delay(300);
 
