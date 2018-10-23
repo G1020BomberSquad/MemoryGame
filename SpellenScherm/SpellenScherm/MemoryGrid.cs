@@ -290,7 +290,7 @@ namespace SpellenScherm
             {
                 if (window.GetType() == typeof(MainWindow))
                 {
-                    (window as MainWindow).scoreName1.Content = scoreName1Tot;
+                    (window as MainWindow).scoreName1.Content = "Score: " + scoreName1Tot;
                 }
             }
 
@@ -298,7 +298,7 @@ namespace SpellenScherm
             {
                 if (window.GetType() == typeof(MainWindow))
                 {
-                    (window as MainWindow).scoreName2.Content = scoreName2Tot;
+                    (window as MainWindow).scoreName2.Content = "Score: " + scoreName2Tot;
                 }
 
             }

@@ -15,7 +15,7 @@
         </Grid>
         <Label Content="Memory Game V1.0" HorizontalAlignment="Left" Height="92" Margin="762,10,0,0" VerticalAlignment="Top" Width="528" Background="{x:Null}" FontFamily="Viner Hand ITC" FontSize="48" Foreground="#5D689A"/>
         <Grid x:Name="users" HorizontalAlignment="Left" Height="618" Margin="34,406,0,0" VerticalAlignment="Top" Width="288" Background="#29387C">
-            <Label x:Name="scoreName1" x:FieldModifier="public" Content="0" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Height="55" Width="268" Background="#5D689A" FontSize="36" FontFamily="Viner Hand ITC" Grid.ColumnSpan="2"/>
+            <Label x:Name="scoreName1" x:FieldModifier="public" Content="Score: 0" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Height="55" Width="268" Background="#5D689A" FontSize="36" FontFamily="Viner Hand ITC" Grid.ColumnSpan="2"/>
         </Grid>
         <Button x:Name="start" Content="Start" HorizontalAlignment="Left" Margin="1540,242,0,0" VerticalAlignment="Top" Width="297" Height="54" FontFamily="Viner Hand ITC" FontSize="36" Background="#29387C" Foreground="#5D689A" Click="start_Click"/>
         <Grid HorizontalAlignment="Left" Height="100" Margin="34,301,0,0" VerticalAlignment="Top" Width="580" Background="#29387C">
@@ -31,7 +31,7 @@
                 <ColumnDefinition Width="146*"/>
                 <ColumnDefinition Width="269*"/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="scoreName2" x:FieldModifier="public" Content="0" HorizontalAlignment="Left" Margin="6,34,0,0" VerticalAlignment="Top" Height="55" Width="268" Background="#5D689A" FontSize="36" FontFamily="Viner Hand ITC" Grid.ColumnSpan="2"/>
+            <Label x:Name="scoreName2" x:FieldModifier="public" Content="Score: 0" HorizontalAlignment="Left" Margin="6,34,0,0" VerticalAlignment="Top" Height="55" Width="268" Background="#5D689A" FontSize="36" FontFamily="Viner Hand ITC" Grid.ColumnSpan="2"/>
         </Grid>
         <Grid x:Name="set1" HorizontalAlignment="Left" Height="54" Margin="34,242,0,0" VerticalAlignment="Top" Width="580" Background="#29387C">
             <TextBox x:Name="nameEnter1" HorizontalAlignment="Left" Height="34" Margin="45,10,0,0" TextWrapping="Wrap" Text="Player 1" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.311,0.552" Background="#3C4986"  Grid.ColumnSpan="2" FontSize="22"/>
