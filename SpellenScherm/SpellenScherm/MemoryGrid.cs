@@ -258,6 +258,9 @@ namespace SpellenScherm
             showTurn();
         }
 
+        /// <summary>
+        /// Gives turns
+        /// </summary>
         private void checkTurn()
         {
             if (turnName1 == true)
@@ -286,6 +289,9 @@ namespace SpellenScherm
             }
         }
 
+        /// <summary>
+        /// When the same card is doubleclicked, the turn is kept
+        /// </summary>
         private void stayTurn()
         {
             if (turnName1 == true)
