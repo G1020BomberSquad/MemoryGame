@@ -241,6 +241,11 @@ namespace SpellenScherm
 
             checkTurn();
 
+            if (Convert.ToString(card1.Source) == Convert.ToString(card2.Source) && (card1 == card2))
+            {
+                stayTurn();
+            }
+
             updateScore();
 
             if (numberOfPairs == 8)
@@ -278,6 +283,20 @@ namespace SpellenScherm
                     turnName2 = false;
                     turnName1 = true;
                 }
+            }
+        }
+
+        private void stayTurn()
+        {
+            if (turnName1 == true)
+            {
+                turnName1 = false;
+                turnName2 = true;
+            }
+            else if (turnName1 == false)
+            {
+                turnName1 = true;
+                turnName2 = false;
             }
         }
 
