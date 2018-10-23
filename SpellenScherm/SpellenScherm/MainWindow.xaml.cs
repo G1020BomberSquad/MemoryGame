@@ -84,5 +84,15 @@ namespace SpellenScherm
         {
             menuBar.Visibility = Visibility.Collapsed;
         }
+
+        public object AccessNamePlayer1()
+        {
+            return name1.Content;
+        }
+
+        public object AccessNamePlayer2()
+        {
+            return name2.Content;
+        }
     }
 }

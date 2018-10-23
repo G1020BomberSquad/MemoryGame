@@ -20,6 +20,7 @@ namespace SpellenScherm
         static int scoreName2Tot;
         static int scoreName1;
         static int scoreName2;
+        static int numberOfPairs;
         private bool hasDelay;
         private bool turnName1 = true;
         private bool turnName2 = false;
@@ -51,7 +52,7 @@ namespace SpellenScherm
                 grid.ColumnDefinitions.Add(new ColumnDefinition());
             }
         }
-        
+
         /// <summary>
         /// Adds images to the grid
         /// </summary>
@@ -146,7 +147,7 @@ namespace SpellenScherm
         /// <summary>
         /// Highlights player, who's turn it is. (non functional, yet)
         /// </summary>
-        private void checkTurn()
+        private void showTurn()
         {
             if (turnName1 == true)
             {
@@ -174,7 +175,7 @@ namespace SpellenScherm
                 {
                     if (window.GetType() == typeof(MainWindow))
                     {
-                        (window as MainWindow).name2.Background =  Brushes.HotPink;
+                        (window as MainWindow).name2.Background = Brushes.HotPink;
                     }
                 }
 
@@ -238,6 +239,22 @@ namespace SpellenScherm
                 resetCards(Image1, Image2);
             }
 
+            checkTurn();
+
+            updateScore();
+
+            if (numberOfPairs == 8)
+            {
+                checkWinner();
+            }
+
+            scoreName1 = 0;
+            scoreName2 = 0;
+            showTurn();
+        }
+
+        private void checkTurn()
+        {
             if (turnName1 == true)
             {
                 if (scoreName1 == 1)
@@ -262,13 +279,6 @@ namespace SpellenScherm
                     turnName1 = true;
                 }
             }
-
-            updateScore();
-
-
-            scoreName1 = 0;
-            scoreName2 = 0;
-            // checkTurn();
         }
 
         /// <summary>
@@ -290,6 +300,7 @@ namespace SpellenScherm
                 {
                     (window as MainWindow).scoreName2.Content = scoreName2Tot;
                 }
+
             }
         }
 
@@ -302,10 +313,12 @@ namespace SpellenScherm
         {
             if (turnName1 == true)
             {
+                numberOfPairs++;
                 scoreName1++;
             }
             else if (turnName2 == true)
             {
+                numberOfPairs++;
                 scoreName2++;
             }
 
@@ -335,6 +348,28 @@ namespace SpellenScherm
             card1.Source = new BitmapImage(new Uri("/images/back.png", UriKind.Relative));
             card2.Source = new BitmapImage(new Uri("/images/back.png", UriKind.Relative));
             hasDelay = false;
+        }
+
+        private void checkWinner()
+        {
+            MainWindow window1 = new MainWindow();
+            object player1 = window1.AccessNamePlayer1();
+
+            MainWindow window2 = new MainWindow();
+            object player2 = window1.AccessNamePlayer2();
+
+            if (scoreName1Tot > scoreName2Tot)
+            {
+                MessageBox.Show(player1 + " heeft gewonnen!");
+            }
+            else if (scoreName1Tot < scoreName2Tot)
+            {
+                MessageBox.Show(player2 + " heeft gewonnen!");
+            }
+            else if (scoreName1Tot == scoreName2Tot)
+            {
+                MessageBox.Show("Gelijkspel!");
+            }
         }
     }
 }
