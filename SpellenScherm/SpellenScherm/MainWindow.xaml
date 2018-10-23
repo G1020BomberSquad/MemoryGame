@@ -23,7 +23,7 @@
                 <ColumnDefinition Width="146*"/>
                 <ColumnDefinition Width="269*"/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="name1" x:FieldModifier="public" Content="Player 1" HorizontalAlignment="Left" Margin="0,21,0,0" VerticalAlignment="Top" Height="55" Width="288" Background="HotPink" FontSize="36" FontFamily="Viner Hand ITC" Grid.ColumnSpan="2" />
+            <Label x:Name="name1" x:FieldModifier="public" Content="Player 1" HorizontalAlignment="Left" Margin="0,21,0,0" VerticalAlignment="Top" Height="55" Width="288" Background="#5D689A" FontSize="36" FontFamily="Viner Hand ITC" Grid.ColumnSpan="2" />
             <Label x:Name="name2" x:FieldModifier="public" Content="Player 2" HorizontalAlignment="Left" Margin="89,21,-1,0" VerticalAlignment="Top" Height="55" Width="288" Background="#5D689A" FontSize="36" FontFamily="Viner Hand ITC" Grid.Column="1"/>
         </Grid>
         <Grid x:Name="users2" HorizontalAlignment="Left" Height="618" Margin="324,406,0,0" VerticalAlignment="Top" Width="288" Background="#29387C">

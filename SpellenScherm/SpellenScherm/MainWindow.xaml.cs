@@ -37,6 +37,7 @@ namespace SpellenScherm
         {
             grid = new MemoryGrid(GameGrid, 4, 4);
             start.Visibility = Visibility.Collapsed;
+            name1.Background = Brushes.HotPink;
         }
 
         private void setNames_Click(object sender, RoutedEventArgs e)
