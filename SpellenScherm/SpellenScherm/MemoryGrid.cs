@@ -14,6 +14,8 @@ namespace SpellenScherm
     public class MemoryGrid
     {
         private Grid grid;
+        public string player1 { get; set; }
+        public string player2 { get; set; }
         private int rows, cols;
         static int numberOfClicks = 0;
         static int scoreName1Tot;
@@ -377,23 +379,14 @@ namespace SpellenScherm
 
         private void checkWinner()
         {
-            MainWindow window1 = new MainWindow();
-            object player1 = window1.AccessNamePlayer1();
-
-            MainWindow window2 = new MainWindow();
-            object player2 = window1.AccessNamePlayer2();
-
-            if (scoreName1Tot > scoreName2Tot)
-            {
-                MessageBox.Show(player1 + " heeft gewonnen!");
-            }
-            else if (scoreName1Tot < scoreName2Tot)
-            {
-                MessageBox.Show(player2 + " heeft gewonnen!");
-            }
-            else if (scoreName1Tot == scoreName2Tot)
+            if (scoreName1Tot == scoreName2Tot)
             {
                 MessageBox.Show("Gelijkspel!");
+            }
+            else
+            {
+                string winner = (scoreName1Tot > scoreName2Tot) ? player1 : player2;
+                MessageBox.Show(winner + " heeft gewonnen!");
             }
         }
     }

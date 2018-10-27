@@ -1,0 +1,17 @@
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\obj\Debug\Memory.csprojAssemblyReference.cache
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\obj\Debug\MainWindow.g.cs
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\obj\Debug\Spellenscherm.g.cs
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\obj\Debug\App.g.cs
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\obj\Debug\Memory_MarkupCompile.cache
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\obj\Debug\Memory_MarkupCompile.lref
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\bin\Debug\Memory.exe.config
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\bin\Debug\Memory.exe
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\bin\Debug\Memory.pdb
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\obj\Debug\MainWindow.baml
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\obj\Debug\Spellenscherm.baml
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\obj\Debug\Memory.g.resources
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\obj\Debug\Memory.Properties.Resources.resources
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\obj\Debug\Memory.csproj.GenerateResource.cache
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\obj\Debug\Memory.csproj.CoreCompileInputs.cache
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\obj\Debug\Memory.exe
+C:\jsmeer\GitHub\ProjectMemory\Game\Memory\Memory\obj\Debug\Memory.pdb
